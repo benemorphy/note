@@ -1,0 +1,37 @@
+﻿git config --global user.name "benemorphy"
+git config --global user.email "benemorphy@126.com"
+#查看配置
+git config -l
+#配置色彩
+ git config --global color.ui true
+#进入项目目录，初始化
+cd /home/bene/mblog
+git init
+或者，
+cd /home/bene
+git init mblog
+#添加目录下文件
+ git add .
+ 提交
+git commit -m "initialized"
+
+
+
+
+#配置ssh，链接到github.com
+#ssh-keygen -t rsa -C "benemorphy@126.com"
+vim /root/.ssh/id_rsa.pub
+#拷贝id_rsa.pub中的内容
+#现在转到github网站上去配置一下ssh key,点击箭头指示图标
+#Account settings，然后点击左侧的SSH Keys，之后点击右侧的
+#Add SSH Key，这样就会出现添加SSH Key的界面，
+#在Title这一栏填一个名字，名字随意起，之后打开刚才生成的
+#那个文件id_rsa.pub，全选复制里面的内容到Key这一栏中，
+#点击Add Key按钮完成操作，这时你填的邮箱会收到一封确认的邮件，
+#不用管它
+ssh –T git@github.com
+
+git init
+git add .
+
+git remote add origin git@github.com:benemorphy/mblog.git
