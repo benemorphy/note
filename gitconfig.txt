@@ -33,5 +33,9 @@ ssh –T git@github.com
 
 git init
 git add .
+git commit -m "first commit"
 
-git remote add origin git@github.com:benemorphy/mblog.git
+#git remote add origin git@github.com:benemorphy/mblog.git
+git remote add origin git@github.com:benemorphy/road.git
+#git push git@github.com:benemorphy/mblog.git
+git push -u origin master
